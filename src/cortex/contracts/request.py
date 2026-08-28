@@ -6,7 +6,7 @@ from uuid import UUID, uuid4
 
 T = TypeVar("T")
 
-@dataclass(frozen=True)
+@dataclass(frozen=True,kw_only=True)
 class Request(Generic[T]):
     """
     Represents an immutable request flowing through the Cortex platform.
